@@ -1,22 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: "/dashboard/",
+  base: '/dashboard/', // ✅ Muy importante para GitHub Pages
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      devOptions: { enabled: true },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        id: '/dashboard/manifest.webmanifest',
+        id: '/dashboard/',
         start_url: '/dashboard/',
+        scope: '/dashboard/',
         name: 'Dashboard del Clima - Proyecto 04',
-        short_name: 'Dashboard del Clima',
-        description: 'Proyecto 04 - dashboard del clima desarrollado con React y MUI',
-        theme_color: '#D3D1D1',
+        short_name: 'Dashboard Clima',
+        description: 'Dashboard del clima desarrollado con React y MUI',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#1976d2',
         icons: [
           {
             src: 'pwa-192x192.png',
@@ -51,7 +53,7 @@ export default defineConfig({
               cacheName: 'open-meteo-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24,
+                maxAgeSeconds: 60 * 60 * 24, // 1 día
               },
               cacheableResponse: {
                 statuses: [0, 200],
@@ -62,4 +64,4 @@ export default defineConfig({
       }
     })
   ]
-})
+});
