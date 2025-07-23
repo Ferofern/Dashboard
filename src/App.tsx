@@ -1,7 +1,6 @@
 import { useState, useMemo } from 'react';
 import {
   CssBaseline,
-  Grid,
   Typography,
   Button,
   TextField,
@@ -12,6 +11,8 @@ import {
   ThemeProvider,
   Paper,
 } from '@mui/material';
+
+import Grid from '@mui/material/Grid'; // <-- Importar Grid así para evitar errores
 
 import HeaderUI from './components/HeaderUI';
 import SelectorUI from './components/SelectorUI';
