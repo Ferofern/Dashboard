@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/dashboard/',  // <-- importante para GitHub Pages en subcarpeta
   plugins: [
     react(),
     VitePWA({
@@ -42,6 +43,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        navigateFallback: '/dashboard/index.html',  // importante para fallback SPA
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*$/,
