@@ -43,7 +43,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        navigateFallback: '/dashboard/index.html',  // importante para fallback SPA
+        navigateFallback: '/Dashboard/index.html',  // importante para fallback SPA
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*$/,
