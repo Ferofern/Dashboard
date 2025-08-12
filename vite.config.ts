@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/dashboard/',  // <-- importante para GitHub Pages en subcarpeta
+  base: '/Dashboard/',  // <-- importante para GitHub Pages en subcarpeta
   plugins: [
     react(),
     VitePWA({
@@ -11,8 +11,8 @@ export default defineConfig({
       devOptions: { enabled: true },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        id: '/dashboard/',
-        start_url: '/dashboard/',
+        id: '/Dashboard/',
+        start_url: '/Dashboard/',
         name: 'Dashboard del Clima - Proyecto 04',
         short_name: 'Dashboard del Clima',
         description: 'Proyecto 04 - dashboard del clima desarrollado con React y MUI',
