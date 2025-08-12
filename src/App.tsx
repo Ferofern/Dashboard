@@ -11,7 +11,7 @@ import {
   ThemeProvider,
   Paper,
 } from '@mui/material';
-
+// comentario
 import HeaderUI from './components/HeaderUI';
 import SelectorUI from './components/SelectorUI';
 import IndicatorUI from './components/IndicatorUI';
