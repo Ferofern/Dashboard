@@ -3,16 +3,16 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/Dashboard/',   // Mantén mayúscula si tu repo se llama Dashboard
+  base: '/dashboard/', // minúsculas
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: { enabled: true },
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'favicon-32x32.png', 'favicon-16x16.png', 'vite.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        id: '/Dashboard/',
-        start_url: '/Dashboard/',
+        id: '/dashboard/',    // minúsculas
+        start_url: '/dashboard/',
         name: 'Dashboard del Clima - Proyecto 04',
         short_name: 'Dashboard del Clima',
         description: 'Proyecto 04 - dashboard del clima desarrollado con React y MUI',
@@ -43,7 +43,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        navigateFallback: '/Dashboard/index.html',
+        navigateFallback: '/dashboard/index.html',
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*$/,
