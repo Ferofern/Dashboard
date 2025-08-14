@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/dashboard/', // minúsculas
+  base: '/', // Simplified for development
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      devOptions: { enabled: true },
+      devOptions: { enabled: true }, // Disabled in development to avoid conflicts
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         id: '/dashboard/',    // minúsculas
