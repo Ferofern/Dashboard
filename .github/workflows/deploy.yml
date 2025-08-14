@@ -3,7 +3,7 @@ name: Deploy React Vite to GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia 'main' si usas otra rama principal
+      - gh-pages  # Cambia 'main' si usas otra rama principal
 
 jobs:
   build-and-deploy:
